@@ -1,0 +1,61 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+.textCenter{
+	width: 100%;
+	text-align: center;
+	font-family: "PingFang SC";
+}
+span{
+	margin-top: 80px;
+	display: block;
+}
+.search{
+	margin: 0;
+	padding: 0;
+	height: 40px;
+}
+.search input[type='text']{
+	border: 2px solid aqua;
+	padding: 8px;
+	width: 270px;
+	border-radius: 5px;
+	height: 40px;
+}
+.search button{
+	height: 40px;
+	border: 0;
+	border-radius: 50px;
+	color: red;
+}
+.search button:hover{
+	cursor: pointer;
+}
+
+.result{
+	margin-top: 180px;
+	display: none;
+}
+.result .content{
+	width: 1100px;
+	margin: 0 auto;
+	background-color: red;
+	padding-left: 5px;
+}
+.result .content_title{
+	width: 100px;
+	margin: auto auto;
+	text-align: center;
+}
+.result .content_title hr{
+	border:1px solid red;
+}
+.result .content .item{
+	width: 210px;
+	height: 210px;
+	background-color: #00FFFF;
+	margin-right: 5px;
+	margin-top: 5px;
+	float: left;
+}
