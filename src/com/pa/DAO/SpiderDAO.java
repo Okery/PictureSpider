@@ -44,7 +44,7 @@ public class SpiderDAO {
 		BufferedReader bf = null;
 		StringBuffer sb = new StringBuffer();
 		
-		try {
+//		try {
 			URL url = new URL(urlPram);
 			URLConnection urlConnection = url.openConnection();
 			isr = new InputStreamReader(urlConnection.getInputStream());
@@ -53,16 +53,20 @@ public class SpiderDAO {
 			while((temp=bf.readLine())!=null){
 				sb.append(temp+"\n");
 			}
-		} catch (Exception e) {
-			// TODO: handle exception
-			System.out.println("Õ¯¬Á∑√Œ “Ï≥£");
-			e.printStackTrace();
-		}finally{
-			if(bf!=null)
-				bf.close();
-			if(isr!=null)
-				isr.close();
-		}
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//			System.out.println("Õ¯¬Á∑√Œ “Ï≥£");
+//			e.printStackTrace();
+//		}finally{
+//			if(bf!=null)
+//				bf.close();
+//			if(isr!=null)
+//				isr.close();
+//		}
+		if(bf!=null)
+			bf.close();
+		if(isr!=null)
+			isr.close();
 		
 		return sb.toString();
 	}

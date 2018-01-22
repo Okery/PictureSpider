@@ -19,12 +19,21 @@ public class SpiderAction  extends ActionSupport{
 	private String url;
 	private List<Picture> pictures;
 	@Action(value="search",results={
-			@Result(name="success",location="/index.jsp")
+			@Result(name="success",location="/index.jsp"),
+			@Result(name="error",location="/error.jsp")
 	})
 	public String search()throws Exception{
-		SpiderDAO dao = new SpiderDAO();
-		pictures = dao.pictures(url);
-		return SUCCESS;
+		try{
+			SpiderDAO dao = new SpiderDAO();
+			pictures = dao.pictures(url);
+			return SUCCESS;
+		}catch (Exception e) {
+			// TODO: handle exception
+			System.out.print("“Ï≥£");
+			System.out.println("---------------");
+			e.printStackTrace();
+			return ERROR;
+		}
 	}
 
 
