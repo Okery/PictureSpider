@@ -8,8 +8,13 @@ $(document).ready(function(){
 				url:url
 				},
 			type:"post",
-			success:function(){
-				alert("成功");
+			success:function(data){
+				//alert(data.message);
+				//判断后台是否出现异常
+				//出现异常则给出提示
+				if(data.flag==1){
+					alert("此地址无法访问！");
+				}
 			}
 		});
 	});
