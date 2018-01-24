@@ -17,12 +17,11 @@ $(document).ready(function(){
 				}else{
 					$(".result").show();
 					for(var i =0;i<data.pictures.length;i++){
-						alert(data.pictures[i].src);
-						$("div[class='result']").append(
-									"<div class=\"item\"><img alt=\"\" src=\""+data.pictures[i].src+"\"></div>"
+						//alert(data.pictures[i].src);
+						$("div[class='content']").append(
+									"<div class=\"item\"><img alt=\"\" src=\""+data.pictures[i].src+"\" width=\"200px\" height=\"200px\"></div>"
 								);
 					}
-					alert("ss");
 				}
 			}
 		});
