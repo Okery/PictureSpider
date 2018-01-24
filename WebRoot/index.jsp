@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -50,38 +51,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<div class="content">
 				<div class="item">
-					
+					<img alt="" src="http://localhost:8080/TaoBao/img/main.png">			
 				</div>
-				<div class="item">
-					
-				</div>
-				<div class="item">
-					
-				</div>
-				<div class="item">
-					
-				</div>
-				<div class="item">
-					
-				</div>
-				<div class="item">
-					
-				</div>
-				<div class="item">
-					
-				</div>
-				<div class="item">
-					
-				</div>
-				<div class="item">
-					
-				</div>
-				<div class="item">
-					
-				</div>
-				
 			</div>
+				
 		</div>
 		<!-- end result -->
+		
 	</body>
 </html>

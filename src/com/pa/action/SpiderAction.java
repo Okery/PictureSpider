@@ -12,6 +12,7 @@ import org.apache.struts2.convention.annotation.Result;
 import com.opensymphony.xwork2.ActionSupport;
 import com.pa.DAO.SpiderDAO;
 import com.pa.pojo.Picture;
+import com.sun.mail.handlers.message_rfc822;
 import com.sun.net.httpserver.Authenticator.Success;
 
 @ParentPackage("json-default")
@@ -30,7 +31,7 @@ public class SpiderAction  extends ActionSupport{
 	
 	
 	@Action(value="search",results={
-			@Result(name="success",location="/index.jsp"),
+			@Result(name="success",type="json"),
 			@Result(name="error",type="json")
 	})
 	public String search()throws Exception{
@@ -39,10 +40,11 @@ public class SpiderAction  extends ActionSupport{
 			SpiderDAO dao = new SpiderDAO();
 			pictures = dao.pictures(url);
 			//执行成功之后返回success
+			flag = "0";
 			return SUCCESS;
 		}catch (Exception e) {
 			// TODO: handle exception
-			//e.printStackTrace();
+			e.printStackTrace();
 			//异常处理
 			//响应前台   
 			//因为这里目前遇到的异常仅仅是网址能否访问到  所以出现异常就返回  不进行异常类型判断
